@@ -1,0 +1,14 @@
+.root {
+	padding: 10px 20px;
+
+	border: 1px solid var(--orange);
+	border-radius: 5px;
+
+	background-color: var(--lightBg);
+
+	color: var(--textColor);
+
+	&::placeholder {
+		color: var(--textColor);
+	}
+}

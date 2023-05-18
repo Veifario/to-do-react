@@ -1,0 +1,17 @@
+.root {
+	display: grid;
+	grid-template-columns: 8fr 1fr;
+	grid-template-rows: 50px 50px;
+	gap: 20px;
+
+	button {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 3;
+
+		img{
+			width: 40%;
+		}
+	}
+}

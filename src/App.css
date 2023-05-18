@@ -1,0 +1,36 @@
+@import "react-toastify/dist/ReactToastify.css";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button,
+input {
+	border: none;
+	background: none;
+	outline: none;
+}
+
+:root {
+	--darkBg: #1b1a17;
+	--lightBg: #242320;
+	--darkOrange: #a35709;
+	--orange: #ff8303;
+	--textColor: #f0e3ca;
+}
+
+body {
+	background-color: var(--darkBg);
+	color: var(--textColor);
+}
+
+.container {
+	width: 100%;
+	max-width: 1020px;
+
+	margin: 30px auto;
+}

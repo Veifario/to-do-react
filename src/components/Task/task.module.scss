@@ -1,0 +1,52 @@
+.root {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 30px;
+
+	border: 2px solid var(--orange);
+	border-radius: 10px;
+
+	background-color: var(--lightBg);
+
+	.content {
+		h2,
+		p {
+			padding: 5px 10px;
+			width: max-content;
+
+			&.edit {
+				border: 1px solid #ffffff;
+				border-radius: 5px;
+			}
+			&.done{
+				text-decoration: line-through;
+			}
+		}
+		h2 {
+			margin-bottom: 5px;
+			font-size: 30px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+
+	.btns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+
+		.save {
+			&.hide {
+				display: none;
+			}
+		}
+
+		.icon {
+			width: 13px;
+			height: 13px;
+		}
+	}
+}
