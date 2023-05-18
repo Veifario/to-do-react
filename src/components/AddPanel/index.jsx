@@ -14,10 +14,22 @@ const AddPanel = () => {
 		body: "",
 	});
 
-	const addTask = async () => {};
+	const addTask = async () => {
+		if (inputValue.title.trim() === "" || inputValue.body.trim() === "") {
+			alert("Заполните поле");
+			return;
+		}
 
-	const handleSetTitle = (e) => {
-		setInputValue({ ...inputValue, title: e.target.value });
+		dispatch(
+			taskAddingWithPost({
+				id: unique(),
+				title: inputValue.title,
+				body: inputValue.body,
+				done: false,
+			})
+		);
+
+		setInputValue({ title: "", body: "" });
 	};
 
 	return (
@@ -25,7 +37,9 @@ const AddPanel = () => {
 			<Input
 				placeholder="Title..."
 				value={inputValue.title}
-				onChange={handleSetTitle}
+				onChange={(e) =>
+					setInputValue({ ...inputValue, title: e.target.value })
+				}
 			/>
 			<Input
 				placeholder="About..."

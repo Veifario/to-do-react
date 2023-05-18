@@ -25,17 +25,17 @@ const tasks = (state = initialState, action) => {
 		case "TASK_ADD":
 			return {
 				...state,
-				// Делай сам
+				tasksList: [...state.tasksList, action.payload],
 			};
 		case "TASK_REMOVE":
 			return {
 				...state,
-				// Делай сам
+				tasksList: action.payload,
 			};
 		case "TASK_EDIT":
 			return {
 				...state,
-				// Делай сам 
+				tasksList: action.payload,
 			};
 		default:
 			return state;
